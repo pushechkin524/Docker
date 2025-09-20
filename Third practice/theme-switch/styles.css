@@ -1,0 +1,16 @@
+:root.light {
+  --bg: #ffffff;
+  --fg: #000000;
+}
+
+:root.dark {
+  --bg: #000000;
+  --fg: #ffffff;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--fg);
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Theme switch</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    (async () => {
+      try {
+        const r = await fetch('config/theme.txt?cb=' + Date.now());
+        const theme = (await r.text()).trim().toLowerCase();
+        document.documentElement.classList.add(theme === 'dark' ? 'dark' : 'light');
+      } catch {
+        document.documentElement.classList.add('light');
+      }
+    })();
+  </script>
+</head>
+<body></body>
+</html>
